@@ -1,0 +1,88 @@
+<!--
+HTML 图像
+通过使用 HTML，可以在文档中显示图像。
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body background="/i/eg_background.jpg">
+<!--本例演示如何向 HTML 页面添加背景图片。-->
+<h3>图像背景</h3>
+<p>gif 和 jpg 文件均可用作 HTML 背景。</p>
+<p>如果图像小于页面，图像会进行重复。</p>
+<!--本例演示如何在文字中排列图像。-->
+<h2>未设置对齐方式的图像：</h2>
+<p>图像 <img src ="/i/eg_cute.gif"> 在文本中</p>
+<h2>已设置对齐方式的图像：</h2>
+<p>图像 <img src="/i/eg_cute.gif" align="bottom"> 在文本中</p>
+<p>图像 <img src ="/i/eg_cute.gif" align="middle"> 在文本中</p>
+<p>图像 <img src ="/i/eg_cute.gif" align="top"> 在文本中</p>
+<p>请注意，bottom 对齐方式是默认的对齐方式。</p>
+<!--本例演示如何使图片浮动至段落的左边或右边。-->
+<p>
+    <img src ="/i/eg_cute.gif" align ="left">
+    带有图像的一个段落。图像的 align 属性设置为 "left"。图像将浮动到文本的左侧。
+</p>
+<p>
+    <img src ="/i/eg_cute.gif" align ="right">
+    带有图像的一个段落。图像的 align 属性设置为 "right"。图像将浮动到文本的右侧。
+</p>
+<!--本例演示如何为图片显示替换文本。在浏览器无法载入图像时，
+替换文本属性告诉读者们失去的信息。为页面上的图像都加上替换文本属性是个好习惯。
+-->
+<p>仅支持文本的浏览器无法显示图像，仅仅能够显示在图像的 "alt" 属性中指定的文本。在这里，"alt" 的文本是“向左转”。</p>
+<p>请注意，如果您把鼠标指针移动到图像上，大多数浏览器会显示 "alt" 文本。</p>
+<img src="/i/eg_goleft.gif" alt="向左转" />
+<p>如果无法显示图像，将显示 "alt" 属性中的文本：</p>
+<img src="/i/eg_goleft123.gif" alt="向左转" />
+<!--本例演示如何将图像作为一个链接使用。-->
+<p>
+    您也可以把图像作为链接来使用：
+    <a href="/example/html/lastpage.html">
+        <img border="0" src="/i/eg_buttonnext.gif" />
+    </a>
+</p>
+<!--本例显示如何创建带有可供点击区域的图像地图。其中的每个区域都是一个超级链接。-->
+<p>请点击图像上的星球，把它们放大。</p>
+<img
+        src="/i/eg_planets.jpg"
+        border="0" usemap="#planetmap"
+        alt="Planets" />
+
+<map name="planetmap" id="planetmap">
+    <area
+            shape="circle"
+            coords="180,139,14"
+            href ="/example/html/venus.html"
+            target ="_blank"
+            alt="Venus" />
+    <area
+            shape="circle"
+            coords="129,161,10"
+            href ="/example/html/mercur.html"
+            target ="_blank"
+            alt="Mercury" />
+    <area
+            shape="rect"
+            coords="0,0,110,260"
+            href ="/example/html/sun.html"
+            target ="_blank"
+            alt="Sun" />
+</map>
+<p><b>注释：</b>img 元素中的 "usemap" 属性引用 map 元素中的 "id" 或 "name" 属性（根据浏览器），所以我们同时向 map 元素添加了 "id" 和 "name" 属性。</p>
+<!--本例显示如何把一幅普通的图像设置为图像映射。-->
+<p>请把鼠标移动到图像上，看一下状态栏的坐标如何变化。</p>
+
+<a href="/example/html/html_ismap.html">
+    <img src="/i/eg_planets.jpg" ismap />
+</a>
+<!--
+<img>	定义图像。
+<map>	定义图像地图。
+<area>	定义图像地图中的可点击区域。
+-->
+</body>
+</html>

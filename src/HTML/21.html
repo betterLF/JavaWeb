@@ -1,0 +1,254 @@
+<!--
+HTML 表格
+HTML 图像
+HTML 列表
+你可以使用 HTML 创建表格。
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--本例演示如何定义跨行或跨列的表格单元格。-->
+<h4>横跨两列的单元格：</h4>
+<table border="1">
+    <tr>
+        <th>姓名</th>
+        <th colspan="3">电话</th>
+    </tr>
+    <tr>
+        <td>Bill Gates</td>
+        <td>555 77 854</td>
+        <td>555 77 855</td>
+        <td>520 77 854</td>
+    </tr>
+</table>
+<h4>横跨两行的单元格：</h4>
+<table border="1">
+    <tr>
+        <th>姓名</th>
+        <td>Bill Gates</td>
+    </tr>
+    <tr>
+        <th rowspan="2">电话</th>
+        <td>555 77 854</td>
+    </tr>
+    <tr>
+        <td>555 77 855</td>
+    </tr>
+</table>
+<!--本例演示如何显示在不同的元素内显示元素。-->
+<table border="1">
+    <tr>
+        <td>
+            <p>这是一个段落。</p>
+            <p>这是另一个段落。</p>
+        </td>
+        <td>这个单元包含一个表格：
+            <table border="1">
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>D</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>这个单元包含一个列表：
+            <ul>
+                <li>苹果</li>
+                <li>香蕉</li>
+                <li>菠萝</li>
+            </ul>
+        </td>
+        <td>HELLO</td>
+    </tr>
+</table>
+<!--本例演示如何使用 Cell padding 来创建单元格内容与其边框之间的空白。-->
+<h4>没有 cellpadding：</h4>
+<table border="1">
+    <tr>
+        <td>First</td>
+        <td>Row</td>
+    </tr>
+    <tr>
+        <td>Second</td>
+        <td>Row</td>
+    </tr>
+</table>
+
+<h4>带有 cellpadding：</h4>
+<table border="1"
+       cellpadding="6">
+    <tr>
+        <td>First</td>
+        <td>Row</td>
+    </tr>
+    <tr>
+        <td>Second</td>
+        <td>Row</td>
+    </tr>
+</table>
+<!--本例演示如何使用 Cell spacing 增加单元格之间的距离。-->
+<h4>没有 cellspacing：</h4>
+<table border="1">
+    <tr>
+        <td>First</td>
+        <td>Row</td>
+    </tr>
+    <tr>
+        <td>Second</td>
+        <td>Row</td>
+    </tr>
+</table>
+
+<h4>带有 cellspacing：</h4>
+<table border="1"
+       cellspacing="10">
+    <tr>
+        <td>First</td>
+        <td>Row</td>
+    </tr>
+    <tr>
+        <td>Second</td>
+        <td>Row</td>
+    </tr>
+</table>
+<!--本例演示如何向表格添加背景。-->
+<h4>背景颜色：</h4>
+<table border="1"
+       bgcolor="red">
+    <tr>
+        <td>First</td>
+        <td>Row</td>
+    </tr>
+    <tr>
+        <td>Second</td>
+        <td>Row</td>
+    </tr>
+</table>
+<!--本例演示如何向一个或者更多表格单元添加背景。-->
+
+<h4>单元背景：</h4>
+<table border="1">
+    <tr>
+        <td bgcolor="red">First</td>
+        <td>Row</td>
+    </tr>
+    <tr>
+        <td
+                background="/i/eg_bg_07.gif">
+            Second</td>
+        <td>Row</td>
+    </tr>
+</table>
+<h4>单元背景：</h4>
+<table border="1">
+    <tr>
+        <td bgcolor="red">First</td>
+        <td>Row</td>
+    </tr>
+    <tr>
+        <td bgcolor="blue" >Second</td>
+        <td>Row</td>
+    </tr>
+</table>
+<!--本例演示如何使用 "align" 属性排列单元格内容,以便创建一个美观的表格。-->
+<table width="400" border="1">
+    <tr>
+        <th align="left">消费项目....</th>
+        <th align="right">一月</th>
+        <th align="right">二月</th>
+    </tr>
+    <tr>
+        <td align="left">衣服</td>
+        <td align="right">$241.10</td>
+        <td align="right">$50.20</td>
+    </tr>
+    <tr>
+        <td align="left">化妆品</td>
+        <td align="right">$30.00</td>
+        <td align="right">$44.45</td>
+    </tr>
+    <tr>
+        <td align="left">食物</td>
+        <td align="right">$730.40</td>
+        <td align="right">$650.00</td>
+    </tr>
+    <tr>
+        <th align="left">总计</th>
+        <th align="right">$1001.50</th>
+        <th align="right">$744.65</th>
+    </tr>
+</table>
+<!--本例演示如何使用 "frame" 属性来控制围绕表格的边框。-->
+<p><b>注释：</b>frame 属性无法在 Internet Explorer 中正确地显示。</p>
+
+<p>Table with frame="box":</p>
+<table frame="box">
+    <tr>
+        <th>Month</th>
+        <th>Savings</th>
+    </tr>
+    <tr>
+        <td>January</td>
+        <td>$100</td>
+    </tr>
+</table>
+
+<p>Table with frame="above":</p>
+<table frame="above">
+    <tr>
+        <th>Month</th>
+        <th>Savings</th>
+    </tr>
+    <tr>
+        <td>January</td>
+        <td>$100</td>
+    </tr>
+</table>
+
+<p>Table with frame="below":</p>
+<table frame="below">
+    <tr>
+        <th>Month</th>
+        <th>Savings</th>
+    </tr>
+    <tr>
+        <td>January</td>
+        <td>$100</td>
+    </tr>
+</table>
+
+<p>Table with frame="hsides":</p>
+<table frame="hsides">
+    <tr>
+        <th>Month</th>
+        <th>Savings</th>
+    </tr>
+    <tr>
+        <td>January</td>
+        <td>$100</td>
+    </tr>
+</table>
+
+<p>Table with frame="vsides":</p>
+<table frame="vsides">
+    <tr>
+        <th>Month</th>
+        <th>Savings</th>
+    </tr>
+    <tr>
+        <td>January</td>
+        <td>$100</td>
+    </tr>
+</table>
+
+</body>
+</html>

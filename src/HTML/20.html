@@ -1,0 +1,169 @@
+<!--
+HTML 表格
+HTML 图像
+HTML 列表
+你可以使用 HTML 创建表格。
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--这个例子演示如何在 HTML 文档中创建表格。-->
+<p>每个表格由 table 标签开始。</p>
+<p>每个表格行由 tr 标签开始。</p>
+<p>每个表格数据由 td 标签开始。</p>
+<h4>一列：</h4>
+<table border="1">
+    <tr>
+        <td>100</td>
+    </tr>
+</table>
+<h4>一行三列：</h4>
+<table border="1">
+    <tr>
+        <td>100</td>
+        <td>200</td>
+        <td>300</td>
+    </tr>
+</table>
+<h4>两行三列：</h4>
+<table border="1">
+    <tr>
+        <td>100</td>
+        <td>200</td>
+        <td>300</td>
+    </tr>
+    <tr>
+        <td>400</td>
+        <td>500</td>
+        <td>600</td>
+    </tr>
+</table>
+<!--本例演示各种类型的表格边框。-->
+<h4>带有普通的边框：</h4>
+<table border="1">
+    <tr>
+        <td>First</td>
+        <td>Row</td>
+    </tr>
+    <tr>
+        <td>Second</td>
+        <td>Row</td>
+    </tr>
+</table>
+<h4>带有粗的边框：</h4>
+<table border="8">
+    <tr>
+        <td>First</td>
+        <td>Row</td>
+    </tr>
+    <tr>
+        <td>Second</td>
+        <td>Row</td>
+    </tr>
+</table>
+<h4>带有很粗的边框：</h4>
+<table border="15">
+    <tr>
+        <td>First</td>
+        <td>Row</td>
+    </tr>
+    <tr>
+        <td>Second</td>
+        <td>Row</td>
+    </tr>
+</table>
+<!--
+表格由 <table> 标签来定义。每个表格均有若干行（由 <tr> 标签定义），每行被分割为若干单元格（由 <td> 标签定义）。
+字母 td 指表格数据（table data），
+即数据单元格的内容。数据单元格可以包含文本、图片、列表、段落、表单、水平线、表格等等。
+-->
+<!--
+表格和边框属性
+如果不定义边框属性，表格将不显示边框。有时这很有用，但是大多数时候，我们希望显示边框。
+使用边框属性来显示一个带有边框的表格：
+<table border="8">代表边框厚度为8
+-->
+<!--
+表格的表头
+表格的表头使用 <th> 标签进行定义。
+大多数浏览器会把表头显示为粗体居中的文本：
+-->
+<table border="1">
+    <tr>
+        <th>Heading</th>
+        <th>Another Heading</th>
+    </tr>
+    <tr>
+        <td>row 1, cell 1</td>
+        <td>row 1, cell 2</td>
+    </tr>
+    <tr>
+        <td>row 2, cell 1</td>
+        <td>row 2, cell 2</td>
+    </tr>
+</table>
+<!--表格中的空单元格
+在一些浏览器中，没有内容的表格单元显示得不太好。如果某个单元格是空的（没有内容），浏览器可能无法显示出这个单元格的边框。
+注意：这个空的单元格的边框没有被显示出来。为了避免这种情况，在空单元格中添加一个空格占位符，就可以将边框显示出来。
+<td>&nbsp;</td>
+-->
+<table border="1">
+    <tr>
+        <td>row 1, cell 1</td>
+        <td>row 1, cell 2</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td><!-- 原来为<td></td>-->
+        <td>row 2, cell 2</td>
+    </tr>
+</table>
+<!--本例演示如何显示表格表头。-->
+<h4>表头：</h4>
+<table border="1">
+    <tr>
+        <th>姓名</th>
+        <th>电话</th>
+        <th>电话</th>
+    </tr>
+    <tr>
+        <td>Bill Gates</td>
+        <td>555 77 854</td>
+        <td>555 77 855</td>
+    </tr>
+</table>
+<h4>垂直的表头：</h4>
+<table border="1">
+    <tr>
+        <th>姓名</th>
+        <td>Bill Gates</td>
+    </tr>
+    <tr>
+        <th>电话</th>
+        <td>555 77 854</td>
+    </tr>
+    <tr>
+        <th>电话</th>
+        <td>555 77 855</td>
+    </tr>
+</table>
+<!--本例演示一个带标题 (caption) 的表格-->
+<h4>这个表格有一个标题，以及粗边框：</h4>
+<table border="6">
+    <caption>我的标题</caption>
+    <tr>
+        <td>100</td>
+        <td>200</td>
+        <td>300</td>
+    </tr>
+    <tr>
+        <td>400</td>
+        <td>500</td>
+        <td>600</td>
+    </tr>
+</table>
+</body>
+</html>

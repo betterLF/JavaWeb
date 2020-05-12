@@ -1,0 +1,60 @@
+<!--HTML 框架-->
+<!--通过使用框架，你可以在同一个浏览器窗口中显示不止一个页面。-->
+<!DOCTYPE html>
+<html lang="en">
+<!--本例演示：如何使用三份不同的文档制作一个垂直框架。-->
+<!--
+<frameset cols="25%,50%,25%">
+    <frame src="/example/html/frame_a.html">
+    <frame src="/example/html/frame_b.html">
+    <frame src="/example/html/frame_c.html">
+    -->
+    <!--本例演示：如何使用三份不同的文档制作一个水平框架。-->
+    <frameset rows="25%,50%,25%">
+
+        <frame src="/example/html/frame_a.html">
+        <frame src="/example/html/frame_b.html">
+        <frame src="/example/html/frame_c.html">
+    </frameset>
+</frameset>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--
+通过使用框架，你可以在同一个浏览器窗口中显示不止一个页面。每份HTML文档称为一个框架，并且每个框架都独立于其他的框架。
+使用框架的坏处：
+开发人员必须同时跟踪更多的HTML文档
+很难打印整张页面
+-->
+<!--
+框架结构标签（<frameset>）
+框架结构标签（<frameset>）定义如何将窗口分割为框架
+每个 frameset 定义了一系列行或列
+rows/columns 的值规定了每行或每列占据屏幕的面积
+编者注：frameset 标签也被某些文章和书籍译为框架集。
+-->
+<!--
+框架标签（Frame）
+Frame 标签定义了放置在每个框架中的 HTML 文档。
+
+在下面的这个例子中，我们设置了一个两列的框架集。第一列被设置为占据浏览器窗口的 25%。
+第二列被设置为占据浏览器窗口的 75%。HTML 文档 "frame_a.htm" 被置于第一个列中，而 HTML 文档 "frame_b.htm" 被置于第二个列中：
+<frameset cols="25%,75%">
+   <frame src="frame_a.htm">
+   <frame src="frame_b.htm">
+</frameset>
+-->
+<!--
+基本的注意事项 - 有用的提示：
+假如一个框架有可见边框，用户可以拖动边框来改变它的大小。为了避免这种情况发生，可以在 <frame> 标签中加入：noresize="noresize"。
+为不支持框架的浏览器添加 <noframes> 标签。
+重要提示：不能将 <body></body> 标签与 <frameset></frameset> 标签同时使用！不过，假如你添加包含一段文本的 <noframes> 标签，
+就必须将这段文字嵌套于 <body></body> 标签内。（在下面的第一个实例中，可以查看它是如何实现的。）
+-->
+<!--本例演示：如何使用 <noframes> 标签。-->
+<noframes>
+    <body>您的浏览器无法处理框架！</body>
+</noframes>
+
+</html>

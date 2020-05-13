@@ -1,0 +1,64 @@
+<!--HTML 表单元素-->
+<!--本章描述所有 HTML 表单元素。-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+<input> 元素
+最重要的表单元素是 <input> 元素。
+<input> 元素根据不同的 type 属性，可以变化为多种形态。
+-->
+<!--
+<select> 元素（下拉列表）
+<select> 元素定义下拉列表：
+-->
+<select name="cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+</select>
+<!--
+<option> 元素定义待选择的选项。
+列表通常会把首个选项显示为被选选项。
+您能够通过添加 selected 属性来定义预定义选项。
+-->
+<!--
+<textarea> 元素
+<textarea> 元素定义多行输入字段（文本域）：
+-->
+<textarea name="message" rows="10" cols="30">
+The cat was playing in the garden.
+</textarea>
+<!--<button> 元素
+<button> 元素定义可点击的按钮：
+-->
+<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+<!--
+HTML5 表单元素
+HTML5 增加了如下表单元素：
+<datalist>
+<keygen>
+<output>
+注释：默认地，浏览器不会显示未知元素。新元素不会破坏您的页面。
+HTML5 <datalist> 元素
+<datalist> 元素为 <input> 元素规定预定义选项列表。
+用户会在他们输入数据时看到预定义选项的下拉列表。
+<input> 元素的 list 属性必须引用 <datalist> 元素的 id 属性。
+-->
+<form action="action_page.php">
+    <input list="browsers">
+    <datalist id="browsers">
+        <option value="Internet Explorer">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+    </datalist>
+</form>
+</body>
+</html>

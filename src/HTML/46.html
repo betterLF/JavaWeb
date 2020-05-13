@@ -1,0 +1,86 @@
+<!--HTML 输入类型-->
+<!---->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+输入类型：text
+<input type="text"> 定义供文本输入的单行输入字段：
+-->
+<form>
+    First name:<br>
+    <input type="text" name="firstname">
+    <br>
+    Last name:<br>
+    <input type="text" name="lastname">
+</form>
+<!--
+输入类型：password
+<input type="password"> 定义密码字段：
+注释：password 字段中的字符会被做掩码处理（显示为星号或实心圆）。
+-->
+<form>
+    User name:<br>
+    <input type="text" name="username">
+    <br>
+    User password:<br>
+    <input type="password" name="psw">
+</form>
+<!--
+输入类型：submit
+<input type="submit"> 定义提交表单数据至表单处理程序的按钮。
+表单处理程序（form-handler）通常是包含处理输入数据的脚本的服务器页面。
+在表单的 action 属性中规定表单处理程序（form-handler）：
+如果您省略了提交按钮的 value 属性，那么该按钮将获得默认文本：
+实例
+<form action="action_page.php">
+First name:<br>
+<input type="text" name="firstname" value="Mickey">
+<br>
+Last name:<br>
+<input type="text" name="lastname" value="Mouse">
+<br><br>
+<input type="submit">
+</form>
+-->
+<form action="action_page.php">
+    First name:<br>
+    <input type="text" name="firstname" value="Mickey">
+    <br>
+    Last name:<br>
+    <input type="text" name="lastname" value="Mouse">
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+<!--
+Input Type: radio
+<input type="radio"> 定义单选按钮。
+Radio buttons let a user select ONLY ONE of a limited number of choices:
+-->
+<form>
+    <input type="radio" name="sex" value="male" checked>Male
+    <br>
+    <input type="radio" name="sex" value="female">Female
+</form>
+<!--
+Input Type: checkbox
+<input type="checkbox"> 定义复选框。
+复选框允许用户在有限数量的选项中选择零个或多个选项。
+-->
+<form>
+    <input type="checkbox" name="vehicle" value="Bike">I have a bike
+    <br>
+    <input type="checkbox" name="vehicle" value="Car">I have a car
+</form>
+<!--
+Input Type: button
+<input type="button> 定义按钮。
+实例
+<input type="button" onclick="alert('Hello World!')" value="Click Me!">
+-->
+</body>
+</html>

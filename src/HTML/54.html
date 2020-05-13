@@ -1,0 +1,77 @@
+<!--HTML 视频-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--在 HTML 中播放视频的方法有很多种。-->
+<video width="320" height="240" controls="controls">
+    <source src="movie.mp4" type="video/mp4" />
+    <source src="movie.ogg" type="video/ogg" />
+    <source src="movie.webm" type="video/webm" />
+    <object data="movie.mp4" width="320" height="240">
+        <embed src="movie.swf" width="320" height="240" />
+    </object>
+</video>
+<!--
+问题，问题，以及解决方法
+在 HTML 中播放视频并不容易！
+您需要谙熟大量技巧，以确保您的视频文件在所有浏览器中（Internet Explorer, Chrome, Firefox, Safari, Opera）
+和所有硬件上（PC, Mac , iPad, iPhone）都能够播放。
+在本章，W3School 为您总结了问题和解决方法。
+-->
+<!--
+最好的 HTML 解决方法
+HTML 5 + <object> + <embed>
+-->
+<video width="320" height="240" controls="controls">
+    <source src="movie.mp4" type="video/mp4" />
+    <source src="movie.ogg" type="video/ogg" />
+    <source src="movie.webm" type="video/webm" />
+    <object data="movie.mp4" width="320" height="240">
+        <embed src="movie.swf" width="320" height="240" />
+    </object>
+</video>
+<!--
+优酷解决方案
+在 HTML 中显示视频的最简单的方法是使用优酷等视频网站。
+如果您希望在网页中播放视频，那么您可以把视频上传到优酷等视频网站，然后在您的网页中插入 HTML 代码即可播放视频：
+<embed src="http://player.youku.com/player.php/sid/XMzI2NTc4NTMy/v.swf"
+width="480" height="400"
+type="application/x-shockwave-flash">
+</embed>
+-->
+<embed src="http://player.youku.com/player.php/sid/XMzI2NTc4NTMy/v.swf"
+       width="480" height="400"
+       type="application/x-shockwave-flash">
+</embed>
+<!--
+使用超链接
+如果网页包含指向媒体文件的超链接，大多数浏览器会使用“辅助应用程序”来播放文件。
+以下代码片段显示指向 AVI 文件的链接。如果用户点击该链接，浏览器会启动“辅助应用程序”，比如 Windows Media Player 来播放这个 AVI 文件：
+实例
+-->
+<a href="movie.swf">Play a video file</a>
+<!--
+关于内联视频的一段注释
+当视频被包含在网页中时，它被称为内联视频。
+如果您打算在 web 应用程序中使用内联视频，您需要意识到很多人都觉得内联视频令人恼火。
+同时请注意，用户可能已经关闭了浏览器中的内联视频选项。
+我们最好的建议是只在用户希望看到内联视频的地方包含它们。一个正面的例子是，在用户需要看到视频并点击某个链接时，会打开页面然后播放视频。
+-->
+<!--
+HTML 4.01 多媒体标签
+标签	描述
+<applet>	不赞成。定义内嵌 applet。
+<embed>	不赞成。定义内嵌对象。（HTML5 中允许）
+<object>	定义内嵌对象。
+<param>	定义对象的参数。
+HTML 5 多媒体标签
+标签	描述
+<video>	标签定义声音，比如音乐或其他音频流。
+<embed>	标签定义嵌入的内容，比如插件。
+-->
+</body>
+</html>

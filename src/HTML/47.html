@@ -1,0 +1,72 @@
+<!--HTML Input 属性-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+value 属性
+value 属性规定输入字段的初始值：
+-->
+<form action="">
+    First name:<br>
+    <input type="text" name="firstname" value="John">
+    <br>
+    Last name:<br>
+    <input type="text" name="lastname">
+</form>
+<!--
+readonly 属性
+readonly 属性规定输入字段为只读（不能修改）：
+readonly 属性不需要值。它等同于 readonly="readonly"。
+-->
+<form action="">
+    First name:<br>
+    <input type="text" name="firstname" value="John" readonly>
+    <br>
+    Last name:<br>
+    <input type="text" name="lastname">
+</form>
+<!--
+disabled 属性
+disabled 属性规定输入字段是禁用的。
+被禁用的元素是不可用和不可点击的。
+被禁用的元素不会被提交。
+disabled 属性不需要值。它等同于 disabled="disabled"。
+-->
+<form action="">
+    First name:<br>
+    <input type="text" name="firstname" value="John" disabled>
+    <br>
+    Last name:<br>
+    <input type="text" name="lastname">
+</form>
+<!--
+size 属性
+size 属性规定输入字段的尺寸（以字符计）：
+-->
+<form action="">
+    First name:<br>
+    <input type="text" name="firstname" value="John" size="40">
+    <br>
+    Last name:<br>
+    <input type="text" name="lastname">
+</form>
+<!--
+maxlength 属性
+maxlength 属性规定输入字段允许的最大长度：
+如设置 maxlength 属性，则输入控件不会接受超过所允许数的字符。
+该属性不会提供任何反馈。如果需要提醒用户，则必须编写 JavaScript 代码。
+注释：输入限制并非万无一失。JavaScript 提供了很多方法来增加非法输入。如需安全地限制输入，则接受者（服务器）必须同时对限制进行检查。
+-->
+<form action="">
+    First name:<br>
+    <input type="text" name="firstname" maxlength="10">
+    <br>
+    Last name:<br>
+    <input type="text" name="lastname">
+</form>
+</body>
+</html>

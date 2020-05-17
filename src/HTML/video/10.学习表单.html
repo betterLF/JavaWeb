@@ -12,24 +12,100 @@ get方式提交：我们可以在url中看到我们提交的信息，不安全�
 post方式提交：比较安全，可以传输大文件
 -->
 <h1>注册</h1>
-<form action="1.我的第一个网页.html" method="post">
+<form action="1.我的第一个网页.html" method="get">
 <!--文本输入框：input type="text"
 value="家务" 默认初始值
 maxlength="4" 最长能写几个字符
 size="30" 文本框的长度
+readonly 无法修改
+hidden 隐藏
+value="admin" readonly
+palceholder 提示信息
+required 该框不能为空
+pattern 正则表达式
 -->
-<p>名字：<input type="text" name="username" ></p>
+    <!--文本输入框：input type="text"-->
+<p>名字：<input type="text" name="username" placeholder="请输入用户名" required></p>
 <!--密码框：input type="password"-->
-<p>密码：<input type="password" name="password"></p>
+<p>密码：<input type="password" name="password" hidden value="123456"></p>
     <!--单选框标签
     input type="radio"
     value:单选框的值
     name:表示组(同一组的只能选一个)
+    disabled 禁选
     -->
  <p>性别：
-     <input type="radio" value="boy" name="sex">男
+     <input type="radio" value="boy" name="sex" disabled>男
      <input type="radio" value="girl"name="sex">女
  </p>
+    <!--多选框  input type="checkbox"
+    checked 默认选中
+    -->
+    <p>爱好：
+        <input type="checkbox" value="sleep" name="hobby">睡觉
+        <input type="checkbox" value="code" name="hobby" checked>敲代码
+        <input type="checkbox" value="chat" name="hobby">聊天
+        <input type="checkbox" value="game" name="hobby">游戏
+    </p>
+    <!--按钮
+    input type="button"
+    input type="image"
+    <input type="submit">
+    <input type="reset"> 重置
+    -->
+    <p>按钮：
+        <input type="button" name="btn1" value="点击变长">
+        <!--<input type="image" src="../resources/images/朴敏英.jpg">-->
+    </p>
+    <!--下拉框，列表框
+    selected 默认选中
+    -->
+   <p>国家：
+       <select name="列表名称">
+           <option value="选项的值" selected>中国</option>
+           <option value="选项的值">美国</option>
+           <option value="选项的值">瑞士</option>
+           <option value="选项的值">英国</option>
+       </select>
+   </p>
+<!--文本域
+cols="50" rows="10"
+-->
+    <p>反馈：
+        <textarea name="textarea" cols="50" rows="10">文本内容</textarea>
+    </p>
+<!--文件域-->
+    <p>
+        <input type="file" name="files">
+        <input type="button" value="上传" name="upload">
+    </p>
+<!-- 邮件验证-->
+    <p>邮箱
+        <input type="email" name="email">
+    </p>
+<!--URL-->
+    <p>URL
+        <input type="url" name="url">
+    </p>
+    <!--数字-->
+    <p>商品数量
+        <input type="number" name="num" max="100" min="0" step="20">
+    </p>
+    <!--滑块-->
+    <p>滑块：
+        <input type="range" name="voice" max="100" min="0" step="2">
+    </p>
+    <!--搜索框-->
+    <p>搜索：
+        <input type="search" name="search" >
+    </p>
+    <p>自定义邮箱：
+        <input type="text",name="diymail" pattern="^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$">
+        
+    </p>
+<!-- 增强鼠标可用性-->
+    <label for="mark">你点我试试</label>
+    <input type="text" id="mark">
     <p>
 <input type="submit">
 <input type="reset">

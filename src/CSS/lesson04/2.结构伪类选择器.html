@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        /*选中ul的第一个子元素*/
+        ul li:first-child{
+            background: green;
+        }
+        /*选中ul的最后一个子元素*/
+        ul li:last-child{
+            background: aqua;
+        }
+    /*选中p1*/
+    /*    body p:first-child{*/
+    /*    background: #a13d30;*/
+    /*    }*/
+    /* 选择当前p元素的父级元素，选中父级元素的第一个,并且是当前元素才生效 */
+    /*    p:nth-child(1){*/
+    /*        background: aquamarine;*/
+    /*    }*/
+    /* 选中父级元素里下的p元素的第二个*/
+        p:nth-of-type(2){
+            background: yellow;
+        }
+        a:hover{
+            background: aqua;
+        }
+    </style>
+</head>
+<body>
+<a href="https://www.baidu.com/?tn=48021271_11_hao_pg">333</a>
+<p>p1</p>
+<p>p2</p>
+<p>p3</p>
+<ul>
+    <li>l1</li>
+    <li>l2</li>
+    <li>l3</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      .demo a{
+          float: left;
+          display: block;
+          height: 50px;
+          width: 50px;
+          border-radius: 10px;
+          background: aqua;
+          text-align: center;
+          color: green;
+          text-decoration: none;
+          margin-right: 5px;
+          font: bold 20px/50px Arial;
+      }
+        /*存在id属性的元素  a[]{}*/
+        /*a[id]{*/
+        /*    background: yellow;*/
+        /*}*/
+      /*属性名，属性名=属性值(可以正则)
+      =绝对等于
+      *=包含这个元素
+      ^=以这个开头
+      $=以这个结尾
+      */
+      /*  a[id=first]{*/
+      /*      background: red;*/
+      /*  }*/
+      /*class中含有links的元素*/
+      /*  a[class*="links"]{*/
+      /*      background: red;*/
+      /*  }*/
+      /*  a[href*="ab"]{*/
+      /*      background: blue;*/
+
+        /*选中href中以http开头的元素*/
+        /*a[href^=http]{*/
+        /*    background: red;*/
+        /*}*/
+        a[href$=doc]{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<p class="demo">
+    <a href="http://www.baidu.com" class="links item first" id="first">1</a>
+    <a href=""class="links item active" target="_blank" title="test">2</a>
+    <a href="abc.doc">3</a>
+    <a href="/abc.pdf">4</a>
+    <a href="images/123.html">5</a>
+    <a href="images/123.jpg" class="links item last">6</a>
+</p>
+</body>
+</html>

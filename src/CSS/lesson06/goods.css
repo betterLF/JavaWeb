@@ -1,0 +1,36 @@
+.title{
+    font-size: 18px;
+    font-weight: bold;
+    tab-index: 1em;
+    line-height: 30px;
+    background: red;
+}
+/*
+list-style：
+none 去掉圆点
+circle 空心圆
+decimal 数字
+square 正方形
+*/
+#nav{
+    width: 270px;
+}
+ul{
+    background: #61646b;
+}
+ul li{
+    height: 30px;
+    list-style: none;
+    tab-index: 1em;
+       /* background-image: url("11.jpg");
+        background-repeat: no-repeat;
+        background-position: 150px 20px;*/
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: cadetblue;
+    text-decoration: underline;
+}

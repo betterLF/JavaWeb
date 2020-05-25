@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--float:行内元素浮动(相比于display，更实用，因为display方向不好控制，但float浮动起来会脱离标准文档流，所以要解决父级边框塌陷的问题)，
+left往左，right往右-->
+<!--clear:right 右侧不允许有浮动
+    clear:left 左侧不允许有浮动
+    clear:both 两侧不允许有浮动
+    clear:none-->
+<!--解决父级元素塌陷的问题：重要！
+1：增加父级元素的高度
+简单，元素假设有了固定的高度，就会被限制
+2：增加一个空的div标签，清除浮动
+简单，但是代码中尽量避免空div
+3：overflow 在父级元素中增加一个 overflow：hidden
+简单，下拉的一些场景避免使用
+4:父类添加一个伪类；after
+避免增加一个空的div
+例:#father:after{
+content: '';
+display:block;
+clear:both;
+}-->
+</body>
+</html>

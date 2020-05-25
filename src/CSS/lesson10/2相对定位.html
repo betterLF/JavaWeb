@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--相对定位：
+    相对于自己原来的位置进行偏移，仍然在标准文档流当中，原来的位置会被保留-->
+    <style>
+        body{
+            padding: 20px;
+        }
+        div{
+            margin: 10px;
+            padding: 5px;
+            font-size: 12px;
+            line-height: 25px;
+        }
+        #father{
+            border: 1px solid red;
+            padding: 0;
+        }
+        #first{
+            background-color: rosybrown;
+            border: 1px dashed rebeccapurple;
+            position: relative;/*相对定位；上下左右*/
+            top:-10px;/*往上移动10个位置*/
+            left: 10px;
+        }
+        #second{
+            background-color: cornflowerblue;
+            border: 1px dashed blue;
+        }
+        #third{
+            background-color: greenyellow;
+            border: 1px dashed green;
+            position: relative;
+            bottom: -10px;
+            right: -10px;
+        }
+    </style>
+</head>
+<body>
+<div id="father">
+    <div id="first">第一个盒子</div>
+    <div id="second">第二个盒子</div>
+    <div id="third">第三个盒子</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--z-index默认是0，最高无限~999
+         opacity: 0.5/*背景透明度*/;
+    -->
+    <style>
+        #content{
+            width: 140px;
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+            font-size: 12px;
+            line-height: 25px;
+            border: 1px solid black;
+        }
+        ul,li{
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+        }
+        /*父级元素相对定位*/
+        #content ul{
+            position: relative;
+        }
+        .tipText, .tipBg{
+            position: absolute;
+            width: 140px;
+            height: 25px;
+            top:122px;
+        }
+        .tipText{
+            z-index: 999;
+            color: white;
+        }
+        .tipBg{
+            background: black;
+            opacity: 0.5/*背景透明度*/;
+        }
+    </style>
+</head>
+<body>
+<div id="content">
+    <ul>
+        <li><img src="11.jpg" alt=""></li>
+        <li class="tipText">你当像鸟飞往你的山</li>
+        <li class="tipBg"></li>
+        <li>时间：2020::5.25</li>
+        <li>地点：宇宙地球村</li>
+    </ul>
+</div>
+</body>
+</html>

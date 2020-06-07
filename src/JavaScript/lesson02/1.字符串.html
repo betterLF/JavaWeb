@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        'use strict';
+        //正常字符串用‘’或者“”包裹，
+        console.log('a\nb');
+        console.log("b");
+        console.log("\u4e2d");//unicode字符
+        console.log("\x41");//ascll码
+        //多行字符串编写，引号在tab键上面
+        var msg=`hello
+        world
+        你好`
+        console.log(msg);
+
+        //字符串拼接
+        let name="jack";
+        let age=3;
+        let m=`你好呀,${name}`;
+        console.log(m);
+
+        //字符串长度
+        var student="student";
+        console.log(student.length);
+
+        //字符串不可变
+
+        //字符串大小写
+        console.log(student.toUpperCase());
+    </script>
+</head>
+<body>
+
+</body>
+</html>

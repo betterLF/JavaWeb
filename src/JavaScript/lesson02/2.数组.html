@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //Array可以包含任意的数据类型
+        //给arr.length赋值，数组大小就会发生变化。如果赋值过小，元素就会丢失
+        var arr=[1,2,3,4,5];//通过下标取值和赋值
+        console.log(arr);
+        console.log(arr.length);
+        //arr.length=10;
+        //console.log(arr);
+
+        //indexof,通过元素获得下标索引,字符串的"1“和数字1不同
+        console.log(arr.indexOf(3));
+
+        //slice()，截取Array的一部分，返回一个新数组
+        console.log(arr.slice(1));
+        console.log(arr.slice(2,4));
+
+        //push,pop 往尾部添加删除,但是arr输出的是整段程序运行后的结果，不是当前结果
+        arr.push('a','b');
+        console.log(arr);
+        // arr.pop();
+        // console.log(arr);
+
+        //unshift shift往头部添加删除
+        // arr.unshift('c','d');
+        // arr.shift();
+
+        //排序
+        var A=['A','C','D','B'];
+        A.sort();
+        console.log(A);
+
+        //拼接,并没有修改数组
+        console.log(A.concat(["a",'b','c']));
+
+        //连接符join 打印拼接数组，使用特定的字符串连接
+        console.log(A.join('-'));
+
+        //多维数组
+        var aa=[[1,2],[3,4],["5","6"]];
+    </script>
+</head>
+<body>
+
+</body>
+</html>

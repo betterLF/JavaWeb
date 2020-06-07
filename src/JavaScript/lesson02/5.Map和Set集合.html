@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        'use strict';
+        //学生的名字，学生的成绩
+        var map=new Map([['tom',99],['jack',98],['lucy',100]]);
+        var age=map.get('tom');
+        map.set('Nacy',98);
+        map.delete('tom',99);
+        console.log(age);
+
+        //Set:无序不重复的集合
+        var set=new Set([3,1,1,2,1]);
+        console.log(set);
+        set.add(4);
+        console.log(set);
+        console.log(set.has(3));//是否包含
+    </script>
+</head>
+<body>
+
+</body>
+</html>

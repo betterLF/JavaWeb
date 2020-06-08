@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // function f() {
+    //      var x=1;//在js中，var定义变量是有作用域的，假设在函数体中声明，则在函数体外不可以使用(如果非要用，要用闭包)
+    //      x=x+1;
+    // }
+    // function f2() {
+    //     var x=2;//在js中，var定义变量是有作用域的，假设在函数体中声明，则在函数体外不可以使用(如果非要用，要用闭包)
+    //     x=x+2;
+    // }
+    // x=x+2;//Uncaught ReferenceError: x is not defined
+    // //如果两个函数使用了相同的函数名，只要不在同一个函数中，就可以
+    // function f() {
+    //    var x=1;
+    //    function f1() {
+    //         var y=x+1;
+    //    }
+    //    var z=y+1;// Uncaught ReferenceError: y is not defined
+    // }
+    // function f() {
+    //     //var y='y'等价于在前面声明了一个var y，只不过未赋值。
+    //     var x="x"+y;
+    //     console.log(x);//xundefined
+    //     var y='y';
+    // }
+    //内部函数可以访问为外部函数的成员，而外部函数不能访问内部函数的成员
+    //假设内部函数变量和外部函数同名，则从自身函数开始，有内向外查找(有一个查找的过程)，如果外部存在这个同名的函数变量，则内部函数会屏蔽外部函数的变量
+    //所以规范：先在函数开始定义所有要用的变量
+    // var  x=1;//全局变量
+    // function f() {
+    //          console.log("x="+x);
+    // }
+    // console.log(x);
+    // var x='xxx';
+    // alert(x);
+    // alert(window.x);//默认所有的全局变量，都会自动绑定在window对象下，alert()函数本身也是一个window对象
+    // var old_alert=window.alert;//此时alert失效
+    // old_alert('xxx');
+    // window.alert=function(){};//此时alert失效
+    // window.alert('111');
+    //js实际上只有一个全局变量，任何变量(函数也可以视为变量)，假设没有在函数作用范围内找到，就会向外查找，如果在全局作用域没有找到，会报错
+    //规范：由于我们所有的全局变量都会绑定到我们的window上，如果有多个js文件使用了相同的全局变量，会发生冲突，如何减少冲突，可以
+    //解决：把自己的代码全部放入到自己定义的唯一空间名字中，降低全局命名冲突的问题
+    //唯一全局变量
+   //  var cc={};
+   //  //定义全局变量
+   //  cc.name='jack';
+   //  cc.add=function (a,b) {
+   // return a+b;
+   //  }
+   //局部定义域let，为了解决局部作用域冲突问题
+   //  function a() {
+   //          // for (var i=0;i<10;i++){
+   //          //     console.log(i);
+   //          // }
+   //          // console.log(i+1);//i出了这个作用域还可以使用
+   //      for (let i=0;i<10;i++){
+   //          console.log(i);
+   //      }
+   //      console.log(i+1);//i出了这个作用域还可以使用
+   //  }
+    //常量 const
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //定义方式1
+    // function abs(x){
+    //     if(x>=0){
+    //         return x;
+    //     }else{
+    //         return -x;
+    //     }
+    // }
+    //一旦执行到return代表函数结束，返回结果。如果没有执行return，函数执行也会返回结果，结果都是undefined
+    // console.log(abs(10));
+    // console.log(abs(-10));
+    //定义方式二
+    var abs=function (x) {
+        // if(typeof x!=='number'){
+        //     throw 'Not a number'
+        // }
+        // for (var i=0;i<arguments.length;i++){
+        //     console.log(arguments[i]);
+        // }
+        if(x>=0){
+            return x;
+        }else{
+            return -x;
+        }
+    }
+    console.log(abs(10));
+    console.log(abs());
+    console.log(abs(10,18,20));
+    //function{...}这是一个匿名函数，但是可以把结果赋值给abs，通过abs就可以调用函数！方式一和方式二等价
+    //参数问题:可以传递任意个参数，也可以不传参数。不传参数可以手动抛出异常if(typeof x!=='number'){throw 'Not a number'}
+    //传递多个参数，arguments是一个数组，代表传入的所有参数，rest是一个数组，获取除了已经定义的参数外的所有参数,定义时用abs(a,...rest)
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //方法就是把函数放在对象的里面，对象只有两个东西：属性和方法
+    function getAge() {
+        var now=new Date().getFullYear();
+        return now-this.birth;
+    }
+    var member={
+        name:'lucy',
+        birth:2000,
+        //方法
+        // age:function () {
+        //     var now=new Date().getFullYear();
+        //     return now-this.birth;
+        // }
+        age:getAge
+    }
+    //console.log(member.birth+","+member.age());
+    console.log(member.age());
+    //在js中this可以控制指向
+    getAge.apply(member,[]);//this指向了member对象，参数为空
+</script>
+</body>
+</html>

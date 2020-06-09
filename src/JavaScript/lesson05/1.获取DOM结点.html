@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="father">
+    <h1>标题一</h1>
+    <p id="p1">p1</p>
+    <p class="p2">p2</p>
+</div>
+<script>
+    //DOM:文档对象类型
+    //核心：整个浏览器网页就是一个Dom树形结构
+    //更新：更新DOM节点
+    //遍历DOM节点，得到DOM节点
+    //删除：删除一个DOM节点
+    //添加：添加一个新的结点
+    //要操作一个DOM结点，就必须先获得这个DOM节点
+    var h1=document.getElementsByName('h1');
+    var p1=document.getElementById('p1');
+    var p2=document.getElementsByClassName('p2');
+    var father=document.getElementById('father');
+    console.log(h1);
+    console.log(p1);
+    console.log(p2);
+    var childrens=father.children;//获取父节点下的所有子结点
+    //father.firstChild;
+    //father.lastChild;
+        //这是原生代码，之后可以用jQuery()
+</script>
+</body>
+</html>

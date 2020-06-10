@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="father">
+    <h1>标题一</h1>
+    <p id="p1">p1</p>
+    <p class="p2">p2</p>
+</div>
+<script>
+//删除结点的步骤：先获取父节点，在通过父节点删除自己
+     // father.removeChild(p1);
+
+     //var self=document.getElementById('p1');
+     //var father=p1.parentElement;
+     //father.removeChild(self);
+
+     //注意：下面方法删除多个结点的时候，children是在时刻变化的，删除结点的时候一定要注意
+     //father.removeChild(father.children[0]);
+     //father.removeChild(father.children[0]);
+</script>
+</body>
+</html>

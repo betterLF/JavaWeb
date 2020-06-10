@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="js">JavaScript</p>
+<div id="list">
+    <p id="se">JavaSE</p>
+    <p id="ee">JavaEE</p>
+    <p id="me">javaME</p>
+</div>
+<script>
+    //我们获得了某个DOM结点，假设这个dom结点是空的，我们通过innerHTML就可以增加一个元素了，
+    //但是这个DOM已经存在元素了，我们就不能这么干，会产生覆盖
+    //var js=document.getElementById('js');
+    //var list=document.getElementById('list');
+    //list.appendChild(js);//追加到后面
+
+    //通过js创建一个新的结点
+    //var newP=document.createElement('p');
+    //newP.id='newP';
+    //newP.innerText='hello';
+    //var list=document.getElementById('list');
+    //list.append(newP);
+
+    //创建一个标签结点(通过这个属性，可以设置任意属性值)
+    //var myScript=document.createElement('script');
+    //myScript.setAttribute('type','text/javascript');
+    //var list=document.getElementById('list');
+    //list.append(myScript);
+
+    //可以创建一个style标签
+    //var myStyle=document.createElement('style');//创建一个空的Style标签
+    //myStyle.setAttribute('type','text.css');
+    //myStyle.innerHTML='body{background-color:chartreuse;}';//设置标签内容
+    //document.getElementsByTagName('head')[0].appendChild(myStyle);
+   //insert
+   //var ee=document.getElementById('ee');
+   //var js=document.getElementById('js');
+   //var list=document.getElementById('list');
+   //list.insertBefore(js,ee);//要包含的结点.insertBefore(newNode,targetNode)
+</script>
+</body>
+</html>

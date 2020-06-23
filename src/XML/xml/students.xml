@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+    <student>
+        <name>吴峰</name>
+        <college>计算机学院</college>
+        <phone>152525</phone>
+        <notes>男，2000年，本科，现在就读于邮电大学</notes>
+    </student>
+    <student>
+        <name>韩清</name>
+        <college>传媒学院</college>
+        <phone>152525</phone>
+        <notes>女，2000年，本科，现在就读于传媒大学</notes>
+    </student>
+    <student>
+        <name>Jack</name>
+        <college>外国语学院</college>
+        <phone>1311856</phone>
+        <notes>男，2000年，本科，现在就读于外国语大学</notes>
+    </student>
+</students>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <database-info>
+        <driver-name>com.mysql.jdbc</driver-name>
+        <url>jdbc:mysql://192.168.1.151:8080</url>
+        <uesr>root</uesr>
+        <password>123</password>
+    </database-info>
+</config>

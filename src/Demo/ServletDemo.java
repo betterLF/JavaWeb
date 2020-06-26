@@ -62,7 +62,6 @@ public class ServletDemo {
                      GenericServlet:
                      1:getServletConfig()  getServletContext()
                      2:abstract service()
-    请求和响应
-    转发与重定向区别
+
      */
 }

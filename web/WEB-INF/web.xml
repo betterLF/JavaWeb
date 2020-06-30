@@ -3,6 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <listener>
+        <listener-class>Listener.ApplicationlistenerDemo</listener-class>
+    </listener>
     <!--注册
            1.类的全路径加载
            2.url
@@ -36,4 +39,207 @@
         <servlet-name>MyServlet</servlet-name>
         <url-pattern>/MyServlet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>Servlet.LoginServlet</servlet-class>
+        <init-param>
+            <param-name>encode</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RegistServlet</servlet-name>
+        <servlet-class>Servlet.RegistServlet</servlet-class>
+        <init-param>
+            <param-name>encode</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegistServlet</servlet-name>
+        <url-pattern>/RegistServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CreateCookieServlet</servlet-name>
+        <servlet-class>Servlet.CreateCookieServlet</servlet-class>
+        <init-param>
+            <param-name>encode</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateCookieServlet</servlet-name>
+        <url-pattern>/CreateCookieServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>GetCookieServlet</servlet-name>
+        <servlet-class>Servlet.GetCookieServlet</servlet-class>
+        <init-param>
+            <param-name>encode</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetCookieServlet</servlet-name>
+        <url-pattern>/GetCookieServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateCookieServlet</servlet-name>
+        <servlet-class>Servlet.UpdateCookieServlet</servlet-class>
+        <init-param>
+            <param-name>encode</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateCookieServlet</servlet-name>
+        <url-pattern>/UpdateCookieServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>KeepCookieServlet</servlet-name>
+        <servlet-class>Servlet.KeepCookieServlet</servlet-class>
+        <init-param>
+            <param-name>encode</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>KeepCookieServlet</servlet-name>
+        <url-pattern>/KeepCookieServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserCookieServlet</servlet-name>
+        <servlet-class>Servlet.UserCookieServlet</servlet-class>
+        <init-param>
+            <param-name>encode</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserCookieServlet</servlet-name>
+        <url-pattern>/UserCookieServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetSessionServlet</servlet-name>
+        <servlet-class>Servlet.GetSessionServlet</servlet-class>
+        <init-param>
+            <param-name>encode</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetSessionServlet</servlet-name>
+        <url-pattern>/GetSessionServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>KeepSessionServlet</servlet-name>
+        <servlet-class>Servlet.KeepSessionServlet</servlet-class>
+        <init-param>
+            <param-name>encode</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>KeepSessionServlet</servlet-name>
+        <url-pattern>/KeepSessionServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RemoveSessionServlet</servlet-name>
+        <servlet-class>Servlet.RemoveSessionServlet</servlet-class>
+        <init-param>
+            <param-name>encode</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RemoveSessionServlet</servlet-name>
+        <url-pattern>/RemoveSessionServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FormRepeatServlet</servlet-name>
+        <servlet-class>Servlet.FormRepeatServlet</servlet-class>
+        <init-param>
+            <param-name>encode</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FormRepeatServlet</servlet-name>
+        <url-pattern>/FormRepeatServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <filter>
+        <filter-name>HelloWorldFilter</filter-name>
+        <filter-class>Filter.HelloWorldFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>HelloWorldFilter</filter-name>
+<!--        <url-pattern>/HelloWorldFilter</url-pattern>-->
+        <url-pattern>/userServlet</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>userServlet</servlet-name>
+        <servlet-class>Filter.userServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>userServlet</servlet-name>
+        <url-pattern>/userServlet</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>userServletFilter</filter-name>
+        <filter-class>Filter.userServletFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>userServletFilter</filter-name>
+        <url-pattern>/userServlet</url-pattern>
+<!--        <servlet-name>userServlet</servlet-name>-->
+<!--        <url-pattern>*.jsp</url-pattern>-->
+<!--        <url-pattern>/web/Cookie/*</url-pattern>-->
+    </filter-mapping>
+
+
+    <filter>
+        <filter-name>HttpFilterTest</filter-name>
+        <filter-class>Filter.HttpFilterTest</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>HttpFilterTest</filter-name>
+        <!--        <url-pattern>/HelloWorldFilter</url-pattern>-->
+        <url-pattern>/HttpFilterTest</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>CharSetFilter</filter-name>
+        <filter-class>Filter.CharSetFilter</filter-class>
+        <init-param>
+            <param-name>code</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CharSetFilter</filter-name>
+        <!--        <url-pattern>/HelloWorldFilter</url-pattern>-->
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
 </web-app>

@@ -7,7 +7,7 @@ package Demo;
 public class httpDemo {
     /*
     HTTP:
-         超文本传输协议
+         超文本传输协议(无状态协议)
          报文：客户端与服务端通信时传输的内容我们称之为报文
          请求报文(get请求和post请求，get请求的信息在url中，post在报文中，相等安全)，响应报文
          报文格式：

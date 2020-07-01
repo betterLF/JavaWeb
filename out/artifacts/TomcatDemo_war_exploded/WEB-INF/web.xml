@@ -3,9 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-    <listener>
-        <listener-class>Listener.ApplicationlistenerDemo</listener-class>
-    </listener>
+<!--    <listener>-->
+<!--        <listener-class>Listener.ApplicationlistenerDemo</listener-class>-->
+<!--    </listener>-->
     <!--注册
            1.类的全路径加载
            2.url
@@ -227,19 +227,30 @@
         <url-pattern>/HttpFilterTest</url-pattern>
     </filter-mapping>
 
-    <filter>
-        <filter-name>CharSetFilter</filter-name>
-        <filter-class>Filter.CharSetFilter</filter-class>
+<!--    <filter>-->
+<!--        <filter-name>CharSetFilter</filter-name>-->
+<!--        <filter-class>Filter.CharSetFilter</filter-class>-->
+<!--        <init-param>-->
+<!--            <param-name>code</param-name>-->
+<!--            <param-value>UTF-8</param-value>-->
+<!--        </init-param>-->
+<!--    </filter>-->
+<!--    <filter-mapping>-->
+<!--        <filter-name>CharSetFilter</filter-name>-->
+<!--        &lt;!&ndash;        <url-pattern>/HelloWorldFilter</url-pattern>&ndash;&gt;-->
+<!--        <url-pattern>/*</url-pattern>-->
+<!--    </filter-mapping>-->
+
+    <servlet>
+        <servlet-name>AjaxServlet</servlet-name>
+        <servlet-class>Ajax.AjaxServlet</servlet-class>
         <init-param>
-            <param-name>code</param-name>
+            <param-name>encode</param-name>
             <param-value>UTF-8</param-value>
         </init-param>
-    </filter>
-    <filter-mapping>
-        <filter-name>CharSetFilter</filter-name>
-        <!--        <url-pattern>/HelloWorldFilter</url-pattern>-->
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>
-
-
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AjaxServlet</servlet-name>
+        <url-pattern>/AjaxServlet</url-pattern>
+    </servlet-mapping>
 </web-app>
